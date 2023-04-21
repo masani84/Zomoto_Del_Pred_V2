@@ -6,6 +6,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
+#to call transformation in data ingestion
 from src.components.data_transformation import DataTransformation
 
 
@@ -25,8 +26,8 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info('Data Ingestion method Starts')
         try:
-            #df=pd.read_csv('notebooks/data/final_cleaned_train_V2.csv')
-            df=pd.read_csv(os.path.join('notebooks/data', 'final_cleaned_train_V2.csv'))
+            #df=pd.read_csv('notebooks/data/final_cleaned_train_V3.csv')
+            df=pd.read_csv(os.path.join('notebooks/data', 'final_cleaned_train_V3.csv'))
             logging.info('Data set read as Dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path), exist_ok=True)
@@ -52,9 +53,13 @@ class DataIngestion:
 if __name__ == '__main__':
     obj = DataIngestion()
     train_data,test_data = obj.initiate_data_ingestion()
+
 '''
+'''
+## run Data Ingestion & DataTranformation ##later mask it
 if __name__ == '__main__':
     obj = DataIngestion()
     train_data_path, test_data_path = obj.initiate_data_ingestion()
     data_tranformation = DataTransformation()
     train_arr, test_arr,_ =data_tranformation.initiate_data_transformation(train_data_path,test_data_path)
+'''
