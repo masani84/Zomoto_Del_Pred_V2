@@ -117,7 +117,7 @@ class DataTransformation:
             )
 
         except Exception as e:
-            logging.info('Exception occured in the initiate_Datatransformation')
+            logging.info('Exception occured in the initiate data tranformation')
             raise CustomException(e, sys)
 
 

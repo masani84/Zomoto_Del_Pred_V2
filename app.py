@@ -32,8 +32,7 @@ def predict_datapoint():
             Type_of_vehicle = request.form.get('Type_of_vehicle'),
             Festival = request.form.get('Festival'),
             City = request.form.get('City')
-            
-
+        
         )
         final_new_data = data.get_data_as_dataframe()
         predict_pipeline = predictPipeline()

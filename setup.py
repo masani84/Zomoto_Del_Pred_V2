@@ -16,8 +16,8 @@ def get_requirements(file_path:str)->List[str]:
 
 
 setup(
-    name='RegressorZomoto',
-    version='0.0.3',
+    name='ZomotoDelTime',
+    version='0.0.1',
     author='Masani',
     author_email='sivakrishna@gmail.com',
     install_requires=get_requirements('requirements.txt'),

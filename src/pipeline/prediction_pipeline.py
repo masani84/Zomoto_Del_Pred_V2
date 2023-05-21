@@ -4,6 +4,9 @@ import os
 from src.logger import logging
 from src.exception import CustomException
 
+
+
+
 import pandas as pd
 
 from src.utils import load_object
@@ -52,6 +55,7 @@ class CustomData:
         self.Road_traffic_density=Road_traffic_density
         self.Vehicle_condition = Vehicle_condition
         self.Type_of_order=Type_of_order
+        self.Type_of_vehicle=Type_of_vehicle
         self.multiple_deliveries= multiple_deliveries
         self.Festival=Festival
         self.City = City
@@ -69,6 +73,7 @@ class CustomData:
                 'Road_traffic_density':[self.Road_traffic_density],
                 'Vehicle_condition':[self.Vehicle_condition],
                 'Type_of_order': [self.Type_of_order],
+                'Type_of_vehicle': [self.Type_of_vehicle],
                 'multiple_deliveries':[self.multiple_deliveries],
                 'Festival':[self.Festival],
                 'City':[self.City],
@@ -84,6 +89,7 @@ class CustomData:
         except Exception as e:
             logging.info('Exception occured in ')
             raise CustomException(e,sys)
+
 
         
     
